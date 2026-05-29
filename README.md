@@ -1,4 +1,3 @@
-````md
 # Pipeline Hazard Simulation Applet
 
 An interactive web-based simulator to visualize how instructions move through a CPU pipeline cycle-by-cycle. The simulator helps understand instruction pipelining, **RAW (Read After Write) hazards**, **stall insertion**, and **data forwarding** through an intuitive execution table.
@@ -9,26 +8,27 @@ Built as part of the **Fundamentals of Computer Science (FoCS)** course.
 
 ## Features
 
-- Supports **4-stage** and **5-stage** pipeline configurations
-- Detects **RAW hazards** automatically
-- Simulates **stall insertion (baseline behavior)**
-- Supports **data forwarding**
-- Displays instruction execution **cycle-by-cycle**
-- Visual pipeline execution table with:
-  - Instruction progression
-  - Hazards
-  - Stalls (`STALL`)
-  - Forwarding (`FWD`)
+* Supports **4-stage** and **5-stage** pipeline configurations
+* Detects **RAW hazards** automatically
+* Simulates **stall insertion (baseline behavior)**
+* Supports **data forwarding**
+* Displays instruction execution **cycle-by-cycle**
+* Visual pipeline execution table with:
+
+  * Instruction progression
+  * Hazards
+  * Stalls (`STALL`)
+  * Forwarding (`FWD`)
 
 ---
 
-````md
 ## Pipeline Configurations
 
 ### 4-Stage Pipeline
+
 ```text
 IF → ID → EX → MEM/WB
-````
+```
 
 Memory access and write-back are combined into a single stage.
 
@@ -40,15 +40,11 @@ IF → ID → EX → MEM → WB
 
 Standard textbook pipeline model.
 
-```
-```
-
-
 ---
 
 ## Supported Instructions
 
-This simulator supports a strict subset of **MIPS assembly**:
+This simulator supports a strict subset of **MIPS assembly**.
 
 ### Arithmetic Instructions
 
@@ -118,7 +114,7 @@ sub $t4, $t2, $t5
 ## Project Structure
 
 ```text
-project/
+pipeline-hazard-simulator/
 │── index.html        # Main webpage
 │── app.js            # UI interaction + simulator integration
 │── simulator.js      # Pipeline simulation engine
@@ -258,7 +254,7 @@ Navigate into the project:
 cd pipeline-hazard-simulator
 ```
 
-Open locally using a server (recommended):
+Open locally using a server (recommended).
 
 ### VS Code
 
@@ -283,6 +279,3 @@ http://localhost:8000
 ## Contributors
 
 Built by students as part of the **Fundamentals of Computer Science (FoCS)** course.
-
-```
-```
