@@ -20,10 +20,24 @@
     </div>
   </header>
 
+  <section class="panel info-panel">
+    <div class="info-content">
+      <h2>About This Simulator</h2>
+      <p>This Pipeline Hazard Simulator helps visualize how instructions move through a CPU pipeline cycle-by-cycle, making it easier to understand RAW hazards, stalls, and data forwarding in computer architecture.</p>
+      <p><em>Built by three students as part of the Fundamentals of Computer Science (FoCS) course.</em></p>
+
+      <h2>How to Use</h2>
+      <ul>
+        <li>Enter instructions in MIPS assembly format (e.g., <code>add $t0, $t1, $t2</code>, <code>lw $t0, 0($t1)</code>).</li>
+        <li>Choose a 4-stage (IF, ID, EX, MEM/WB) or 5-stage (IF, ID, EX, MEM, WB) pipeline.</li>
+        <li>Enable/disable data forwarding to compare execution behavior.</li>
+        <li>Run the simulation to view instruction flow, stalls, and hazard resolution cycle-by-cycle.</li>
+      </ul>
+    </div>
+  </section>
   <section class="panel input-panel">
     <div class="controls-grid">
 
-      <!-- LEFT: Instruction Input -->
       <div class="instruction-setup">
         <div class="setup-header">
           <label>Enter Instructions</label>
@@ -34,8 +48,7 @@
         </div>
 
         <div id="instruction-list" class="instruction-list">
-          <!-- Instruction rows added by JS -->
-        </div>
+          </div>
 
         <div class="textarea-fallback">
           <label for="instructions-input">Raw Instructions</label>
@@ -45,7 +58,6 @@
         <div id="error-message" class="error-message hidden"></div>
       </div>
 
-      <!-- RIGHT: Pipeline Config -->
       <div class="options-group">
         <div class="setting-row">
           <label for="stages-select">Pipeline Stages:</label>
@@ -63,16 +75,13 @@
         </div>
       </div>
 
-    </div><!-- /.controls-grid -->
-
-    <div class="button-group">
+    </div><div class="button-group">
       <button id="btn-run"   class="btn primary">Run</button>
       <button id="btn-step"  class="btn secondary">Step</button>
       <button id="btn-reset" class="btn outline">Reset</button>
     </div>
   </section>
 
-  <!-- Simulation Output -->
   <section id="simulator-view" class="view-section hidden">
 
     <div id="stats-bar" class="stats-bar hidden"></div>
