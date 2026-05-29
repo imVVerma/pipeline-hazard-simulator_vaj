@@ -22,6 +22,7 @@ Built as part of the **Fundamentals of Computer Science (FoCS)** course.
 
 ---
 
+````md
 ## Pipeline Configurations
 
 ### 4-Stage Pipeline
@@ -38,6 +39,10 @@ IF → ID → EX → MEM → WB
 ```
 
 Standard textbook pipeline model.
+
+```
+```
+
 
 ---
 
